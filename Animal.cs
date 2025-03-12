@@ -9,13 +9,16 @@ namespace Inheritance_practice
     internal class Animal
     {
         string _type;
+        string _name;
         public Animal() 
         {
             _type = "Aquatic";
+            _name = "Fish";
         }
-        public Animal(string type)
+        public Animal(string type,string name)
         {
             _type = type;
+            _name = name;
         }
 
         public void DisplayAnimalType()
@@ -27,12 +30,10 @@ namespace Inheritance_practice
     {
         public static void RunExample()
         {
-            Console.WriteLine("Type of Animal");
-
-            Animal animal = new Animal("Wild");
+            Animal animal = new Animal("Wild","Tiger");
             animal.DisplayAnimalType();
 
-            Animal animal1 = new Animal("Domestic");
+            Animal animal1 = new Animal("Domestic","Dog");
             animal1.DisplayAnimalType();
 
             Animal animal2 = new Animal();
